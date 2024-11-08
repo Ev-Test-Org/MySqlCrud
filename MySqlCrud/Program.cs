@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string[] columns = { "FirstName!?", "LastName" };
+            string[,] values =
+            {
+                {"FirstName3", "LastName3"},
+                {"FirstName4", "LastName4"}
+            };
+            DBConnection.Instance.Create("TestTable", columns, values);
         }
     }
 }
